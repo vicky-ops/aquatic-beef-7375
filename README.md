@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# BharatMart - (aquatic-beef-7375)
+ Indian e-commerce company that provides B2B and customer to customer sales services via its web portal.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Clone of indiamart.com
+<p align="center">
+  <img src="https://gumlet.assettype.com/barandbench%2F2022-03%2F77dfae18-62d6-42d2-a505-e7fc347384b1%2FINDIAMART.jpg?format=auto" width="100%" title="hover text">
+</p>
 
-In the project directory, you can run:
 
-### `npm start`
+# Indiamart.com
+-Indian e-commerce company that provides B2B and customer to customer sales services via its web portal. project.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Teammates name:
+- [@kaush101](https://github.com/kaush101)
+- [@sachin4147](https://github.com/sachin4147)
+- [@akhi4009](https://github.com/akhi4009) 
+- [@vicky-ops](https://github.com/vicky-ops)
 
-### `npm test`
+## Tech Stack used
+- `TypeScript`
+- `REACT`
+- `REDUX`
+- `CHAKRA-UI`
+- `JAVA SCRIPT`
+- `HTML`
+- `CSS`
+- `JSON SERVER`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Deployed Link
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pages & Features
+- Home Page(Stays)
+- Flight Page
+- Login-in  and sign-up Page
+- Hotel search 
+- Flight search
+- Listing of various destinations
+- Listing of hotels
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Snap shots
+<b> Home Page </b>
 
-### `npm run eject`
+![booking](https://user-images.githubusercontent.com/104014308/188278962-d6006f9a-c3d7-49f8-b2ec-2c560440f941.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<b> Hotel Search </b>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Hotels](https://user-images.githubusercontent.com/104014308/190851724-35b2a79f-6b4a-4a73-8916-1321e95cfe06.PNG)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+<b> Flights Page </b>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![booking1](https://user-images.githubusercontent.com/104014308/188279143-f71affe1-ccf5-4b51-ab87-642db5c32f0e.PNG)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<b> Flights Booking Page </b>
+
+![booking2](https://user-images.githubusercontent.com/104014308/188279238-1efb8317-7d59-448b-8d28-201c3421dda9.JPG)
+
+
+
+
+
+
+
