@@ -7,5 +7,6 @@ export  type Product={
     price:string,
     ram:string,
     hard_drive_size:string,
+    pns_h:string
     
 }
