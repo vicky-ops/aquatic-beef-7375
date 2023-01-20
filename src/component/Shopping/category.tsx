@@ -1,6 +1,10 @@
 import React from 'react'
 import { Image,Box,Text,Flex } from '@chakra-ui/react'
-const category= [
+type CategoryProps={
+  image:string,
+  title:string
+}
+const category:CategoryProps[]= [
   {
    "image": "https://shopping.imimg.com/style/ladies-wear.png",
    "title": "Ladies Wear"
@@ -44,7 +48,7 @@ const Category = () => {
     <>
     <Flex justify="space-around"  m={30} gap={5}>
     {category.map(ele=>(
-      <Box>
+      <Box key={ele.title}>
         <Image src={ele.image} alt={ele.title}/>
         <Text>{ele.title}</Text>
       </Box>
