@@ -3,20 +3,55 @@ import { Product } from "./constant";
 import "./Modal.css";
 
 
-
+import {ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Card=({id,image,title,name,brand,price,ram,hard_drive_size,pns_h}:Product)=>{
     const [modal, setModal] = useState(false);
+    const [length, setLength] = useState(0);
     
+    const inputLength=()=>{
+        setLength(length+1)
+        console.log(length)
+    }
 
     const toggleModal = () => {
         setModal(!modal);
       };
     const submitModal = () => {
-        setModal(!modal);
         
-    alert("Supplier will Call you sortly")
-      };
+        
+if(length<10){
+    toast.error('🦄 Enter 10 Digit Phone-Number', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+
+        console.log(length)
+        setLength(0)
+}else if(length===10){
+    setModal(!modal);
+    toast.success("Supplier will Contact you sortly!",{
+        position: "bottom-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",       })
+    setLength(0)
+}
+
+           
+        
+     };
     
       if(modal) {
         document.body.classList.add('active-modal')
@@ -29,7 +64,7 @@ const Card=({id,image,title,name,brand,price,ram,hard_drive_size,pns_h}:Product)
     <p style={{color:"blue"}} >{title} {ram},{hard_drive_size}</p>
     <p style={{color:"teal"}}>{name}</p>
     <h3 style={{color:"teal",fontWeight:"bold"}}>{brand}</h3>
-    <p>{id}</p>
+    
     <p>&#x20b9;{price} </p>
     {/* <p>{ram}</p>
     <p>{hard_drive_size}</p> */}
@@ -50,7 +85,7 @@ const Card=({id,image,title,name,brand,price,ram,hard_drive_size,pns_h}:Product)
             </div>
            <div style={{justifyContent:"center",alignItems:"center",display:"flex",flexDirection:"column",margin:"10px",boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
             <h2 style={{color:"#047a70",fontSize:"25px",fontWeight:"bold"}} >Enter Your Phone-Number </h2>
-           <input style={{width:"80%",border:"1px solid gray"}} type="number" placeholder="Enter Your Phone-Number" />
+           <input style={{width:"80%",border:"1px solid gray",height:"20px"}} type="number" placeholder="Enter Your Phone-Number" onChange={inputLength} />
            <br/>
            <button onClick={submitModal} style={{background:"#047a70",borderRadius:"5px",border:"none",height:"30px",width:"140px",color:"white",fontWeight:"bold",cursor:"pointer",margin:"5px"}} >Submit</button>
            <p style={{color:"#047a70",margin:"5px"}} >You are just a click away to get quotes from sellers</p>
@@ -64,7 +99,7 @@ const Card=({id,image,title,name,brand,price,ram,hard_drive_size,pns_h}:Product)
         </div>
       )}
      
-   
+     <ToastContainer/>
     </div>
        
     
