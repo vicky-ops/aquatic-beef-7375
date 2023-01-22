@@ -11,37 +11,49 @@ import {
   TableContainer,
   Box,Button, Heading
 } from '@chakra-ui/react'
-import { CartProps, Product } from '../constant';
+import { CartProps, Product,} from '../constant';
 import { getData } from '../api';
 import { deleteProduct } from '../api';
+
+
+
+ 
 
 
 
 const Cart = () => {
 
  const [data,setData]=useState<CartProps[]>([])
+ const [change,setChange]=useState<boolean>(false)
+
+
+ 
+
  const handleDelete=(id:number)=>{
+  
   deleteProduct(id)
+setChange(prev=>!prev)
+  
   
     }
 
  useEffect(()=>{
 
 getData("cart").then(res=>setData(res))
- },[handleDelete])
+ },[change])
  
-    
+   
  
 return <>
  <Heading>Cart</Heading>
   <TableContainer >
   <Table variant='simple' width="100%" size={{base:"sm",sm:"sm",md:"md",lg:"lg"}}>
     <TableCaption>No Exchange | No refunds</TableCaption>
-    <Thead >
+    <Thead  >
       <Tr m={10} >
-        <Th  >PRODUCT</Th>
-        <Th >PRICE</Th>
-        <Th >REMOVE FROM CART</Th>
+        <Th >PRODUCT</Th>
+        <Th  >PRICE</Th>
+        <Th  >REMOVE FROM CART</Th>
       </Tr>
     </Thead>
    
@@ -60,7 +72,7 @@ return <>
    
     <Tfoot>
       <Tr>
-        <Th >Final Price</Th>
+        <Th>Final Price</Th>
         <Th >₹ {Math.round(data&&data.reduce((a,c)=>a+ Number(c.price),0))}</Th>
       
       </Tr>

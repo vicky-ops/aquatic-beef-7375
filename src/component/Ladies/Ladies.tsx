@@ -1,17 +1,22 @@
-import { Grid, GridItem } from '@chakra-ui/layout'
+import { Grid, GridItem,Heading } from '@chakra-ui/layout'
 import React,{useEffect, useState} from 'react'
 import { getData } from '../api'
 import { Product } from '../constant'
 import ProductItem from '../ProductItem'
-import { useSelector,useDispatch } from 'react-redux'
-import { RepeatClockIcon } from '@chakra-ui/icons'
+
 
 
 const Ladies = () => {
     const [data,setData]=useState<Product[]>([])
+   
 useEffect(()=>{
-getData("ladies").then(res=>setData(res))
+
+getData("ladies").then(res=>{
+
+  setData(res)})
 },[])
+
+
 
 
   return (
