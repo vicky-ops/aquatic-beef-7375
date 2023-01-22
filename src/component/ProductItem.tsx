@@ -1,22 +1,29 @@
 import { Card,  CardBody, Image,Stack,Heading,Text,Button,ButtonGroup} from '@chakra-ui/react'
 import axios from 'axios'
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { addData } from './api'
 
 
-import { Product } from './constant'
+import { Product,CartProps } from './constant'
 
 
-
+let Adddata="ADDDATA"
 
 
 const ProductItem = (ele:Product) => {
   const{image,title,price,brand}=ele
+ const[changestate,setChangeState]=useState<boolean>(false)
+
+
+
 
   const handleAdd=()=>{
     addData(ele).then(res=>console.log(res))
+  setChangeState(prev=>!prev)
+   localStorage.setItem("key",JSON.stringify(changestate))
+   alert("added in the cart")
   }
- 
+
  
 
  

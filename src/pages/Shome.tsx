@@ -7,7 +7,8 @@ import Ladies from '../component/Ladies/Ladies'
 import Mens from '../component/Mens/Mens'
 import Footwear from '../component/Footwear/Footwear'
 import Industrial from '../component/Industrial/Industrial'
-
+import Cart from '../component/Cart/Cart'
+import { Navbar } from '../sachin/components/Navbar'
 const Shome = () => {
   const [change,setChange]=useState<Boolean>(false)
 
@@ -16,6 +17,7 @@ const Shome = () => {
   }
   return (
     <>
+    <Navbar/>
     <Snavbar  />
     <Category/>
     <Flex backgroundImage="https://shopping.imimg.com/style/mBnr.webp" p={30} justify="space-around" w="90%"  m="auto" direction={{base:"column",lg:"row"}}>
@@ -40,6 +42,7 @@ const Shome = () => {
     <Footwear/>
     <Heading size="lg" as="h1" m={20}>Industrial Chemical </Heading>
     <Industrial/>
+<footer/>
     </>
   )
 }

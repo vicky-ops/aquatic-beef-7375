@@ -1,21 +1,28 @@
 import React,{useState,useEffect} from 'react'
 
-import { Flex, Image,Input,InputGroup,Text,Button,Box, Show,useMediaQuery
+import { Flex, Image,Input,InputGroup,Text,Button,Box, Show,useMediaQuery, localStorageManager
  } from '@chakra-ui/react'
  import { SearchIcon} from '@chakra-ui/icons'
  import { getData } from '../api'
  import { Product } from '../constant'
  
+ 
+
 
 const Snavbar = () => {
   const [data,setData]=useState<Product[]>([])
   const [isLargerThan800] = useMediaQuery('(min-width: 768px)')
-  let cardnu=data.length
+
+
+
+ 
+
 
  useEffect(()=>{
 getData("cart").then(res=>setData(res)) 
  },[])
- console.log(data)
+
+
 
  
   return (
@@ -33,10 +40,12 @@ getData("cart").then(res=>setData(res))
       </InputGroup>
       </Box>}
 
-    <Box ><Button h="30px" p={5} backgroundColor="#2e3192" color="white">Card:<Text pl={2}>{cardnu}</Text></Button></Box>
+    <Box ><Button h="30px" p={5} backgroundColor="#2e3192" color="white">Cart:<Text pl={2}>{data.length}</Text></Button></Box>
     </Flex>
  </Flex>
   )
 }
 
 export default Snavbar
+
+
