@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image,Box,Text,Grid, GridItem,Flex} from '@chakra-ui/react'
-import { RepeatClockIcon } from '@chakra-ui/icons'
+// import { RepeatClockIcon } from '@chakra-ui/icons'
 type CategoryProps={
-  image:string,
+  image:string, 
   title:string
 }
 const category:CategoryProps[]= [

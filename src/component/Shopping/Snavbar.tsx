@@ -2,10 +2,10 @@ import React,{useState,useEffect} from 'react'
 
 import { Flex, Image,Input,InputGroup,Text,Button,Box, Show,useMediaQuery
  } from '@chakra-ui/react'
- import { SearchIcon} from '@chakra-ui/icons'
- import { getData } from '../api'
- import { Product } from '../constant'
  
+ import { getData } from '../api' 
+ import { Product } from '../constant'
+ import { FaSearch } from 'react-icons/fa';
 
 const Snavbar = () => {
   const [data,setData]=useState<Product[]>([])
@@ -29,7 +29,7 @@ getData("cart").then(res=>setData(res))
       <InputGroup>
       
       <Input placeholder='What are you looking for?' />
-      <Button h="30px"  p={5}backgroundColor="#2a6462" color="white"><SearchIcon mr={3}/> Search</Button>
+      <Button h="30px"  p={5}backgroundColor="#2a6462" color="white"><FaSearch/> Search</Button>
       </InputGroup>
       </Box>}
 

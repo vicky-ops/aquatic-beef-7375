@@ -3,8 +3,8 @@ import React,{useEffect, useState} from 'react'
 import { getData } from '../api'
 import { Product } from '../constant'
 import ProductItem from '../ProductItem'
-import { useSelector,useDispatch } from 'react-redux'
-import { RepeatClockIcon } from '@chakra-ui/icons'
+// import { useSelector,useDispatch } from 'react-redux'
+// import { RepeatClockIcon } from '@chakra-ui/icons'
 
 
 const Ladies = () => {
