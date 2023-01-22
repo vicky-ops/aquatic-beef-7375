@@ -9,6 +9,7 @@ import Footwear from '../component/Footwear/Footwear'
 import Industrial from '../component/Industrial/Industrial'
 import Cart from '../component/Cart/Cart'
 import { Navbar } from '../sachin/components/Navbar'
+import { Footbar } from '../sachin/components/Footbar'
 const Shome = () => {
   const [change,setChange]=useState<Boolean>(false)
 
@@ -42,7 +43,7 @@ const Shome = () => {
     <Footwear/>
     <Heading size="lg" as="h1" m={20}>Industrial Chemical </Heading>
     <Industrial/>
-<footer/>
+<Footbar/>
     </>
   )
 }
