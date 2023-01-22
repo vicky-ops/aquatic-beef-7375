@@ -4,6 +4,8 @@ import { getTodos, htl, lth, hP, APple, DEll,LEnovo,ACer,TOshiba,MIcrosoft } fro
 import Card from "./Card";
 import { Product } from "./constant";
 import axios, { AxiosResponse } from "axios"
+// import { Navbar } from "../../sachin/components/Navbar";
+// import { Footbar } from "../../sachin/components/Footbar";
 
 
 const Laptop = () => {
@@ -82,7 +84,7 @@ const Laptop = () => {
         return (<div>
             
 
-          
+          {/* <Navbar/> */}
 
            <div className="sort" >
            <h1 style={{marginLeft:"10px",fontSize:"32px",fontWeight:"bold",color:"teal"}} >LAPTOP</h1>
@@ -164,6 +166,7 @@ const Laptop = () => {
             
             </div>
             <button style={{background:"#2e3192",color:"white",width:"150px",fontWeight:"bold",borderRadius:"7px",border:"none",height:"30px"}}  onClick={showMore} >Show More</button>
+            {/* <Footbar/> */}
 </div>
 
 )

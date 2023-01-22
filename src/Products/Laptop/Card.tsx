@@ -68,7 +68,7 @@ if(length<10){
     <p>&#x20b9;{price} </p>
     {/* <p>{ram}</p>
     <p>{hard_drive_size}</p> */}
-    <p>Call {pns_h}</p>
+     <div ><p > <span style={{fontWeight:"bold",color:"green"}} >CALL</span> {pns_h}</p></div>
     <button onClick={toggleModal} style={{background:"#047a70",borderRadius:"5px",border:"none",height:"30px",width:"140px",color:"white",fontWeight:"bold",cursor:"pointer",margin:"5px"}} >Contact Supplier</button>
     {modal && (
         <div className="modal" >
