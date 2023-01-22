@@ -1,3 +1,4 @@
+import { Brands } from "./Brands"
 import { Findsupply } from "./Findsuppy"
 import {  LandingPage1 } from "./Landingpages/Landingpage1"
 import { LandingPage10 } from "./Landingpages/Landingpage10"
@@ -15,6 +16,7 @@ import { LandingPage9 } from "./Landingpages/Landingpage9"
 export const MainLanding=()=>{
 
     return <div>
+
         <LandingPage1/>
         <LandingPage2/>
         <LandingPage3/>
@@ -27,5 +29,6 @@ export const MainLanding=()=>{
         <Findsupply/>
         <LandingPage10/>
         <LandingPage11/>
+       
     </div>
 }
