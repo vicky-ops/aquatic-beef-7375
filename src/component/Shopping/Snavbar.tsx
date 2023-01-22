@@ -26,7 +26,7 @@ getData("cart").then(res=>setData(res))
 
  
   return (
-    <Flex justifyContent="space-evenly" h="100px" pos="sticky">
+    <Flex justifyContent="space-evenly" h="100px" position="sticky" mb={10}>
       <Box w="20%"> 
           <Image   src="https://i.ibb.co/Zc5Y127/logo-bharatmart2.png" alt="logo-bharatmart2" w="150px"  />
       </Box>
