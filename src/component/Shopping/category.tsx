@@ -1,5 +1,6 @@
 import React from 'react'
-import { Image,Box,Text,Flex } from '@chakra-ui/react'
+import { Image,Box,Text,Grid, GridItem,Flex} from '@chakra-ui/react'
+import { RepeatClockIcon } from '@chakra-ui/icons'
 type CategoryProps={
   image:string,
   title:string
@@ -44,18 +45,23 @@ const category:CategoryProps[]= [
   
 
 const Category = () => {
+
+  
   return (
     <>
-    <Flex justify="space-around"  m={30} gap={5}>
+    <Grid justifyContent="space-around" alignItems="center" 
+     templateColumns={{ base:"repeat(4,1fr)",md:"repeat(8,1fr)"}}m={30} gap={5}>
     {category.map(ele=>(
-      <Box key={ele.title}>
-        <Image src={ele.image} alt={ele.title}/>
+      <GridItem key={ele.title} >
+      <Flex direction="column" gap={5}>
+        <Image src={ele.image} alt={ele.title} width="40%"/>
         <Text>{ele.title}</Text>
-      </Box>
+      </Flex>
+      </GridItem>
      
       
     ))}
-    </Flex>
+    </Grid>
     </>
   )
 }

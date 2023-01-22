@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
+
 import Snavbar from '../component/Shopping/Snavbar'
 import Category from '../component/Shopping/category'
 import { Image,Flex,Heading,Text } from '@chakra-ui/react'
@@ -8,31 +9,36 @@ import Footwear from '../component/Footwear/Footwear'
 import Industrial from '../component/Industrial/Industrial'
 
 const Shome = () => {
+  const [change,setChange]=useState<Boolean>(false)
+
+  const handleChange=()=>{
+    setChange(prev=>!prev)
+  }
   return (
     <>
-    <Snavbar/>
+    <Snavbar  />
     <Category/>
-    <Flex backgroundImage="https://shopping.imimg.com/style/mBnr.webp" p={30} justify="space-between" w="88%" m="auto">
-      <Flex direction="column" pl={100} >
+    <Flex backgroundImage="https://shopping.imimg.com/style/mBnr.webp" p={30} justify="space-around" w="90%"  m="auto" direction={{base:"column",lg:"row"}}>
+      <Flex direction="column"   gap={{base:"10px",lg:"20px"}} >
         <Heading   color="#97daff">
           Discover
         </Heading>
         <Text fontSize={30} color="white">Winter Collection</Text>
         <Text fontSize={20} color="#97daff">On IndiaMart</Text>
       </Flex>
-      <Flex>
-      <Image  src="https://shopping.imimg.com/style/b1.webp"/>
-    <Image src="https://shopping.imimg.com/style/b2.webp"/>
+      <Flex mt={{base:"20px",}}>
+      <Image  src="https://shopping.imimg.com/style/b1.webp" w={{base:"50%"}} />
+     <Image src="https://shopping.imimg.com/style/b2.webp" w={{base:"50%"}} />
       </Flex>
       
     </Flex>
-    <Heading size="lg" as="h1">Ladies Wear</Heading>
+    <Heading size="lg" as="h1" m={20}>Ladies Wear</Heading>
     <Ladies/>
-    <Heading size="lg" as="h1">Mens Wear</Heading>
+    <Heading size="lg" as="h1" m={20}>Mens Wear</Heading>
     <Mens/>
-    <Heading size="lg" as="h1">Footwear </Heading>
+    <Heading size="lg" as="h1" m={20}>Footwear </Heading>
     <Footwear/>
-    <Heading size="lg" as="h1">Industrial Chemical </Heading>
+    <Heading size="lg" as="h1" m={20}>Industrial Chemical </Heading>
     <Industrial/>
     </>
   )

@@ -3,14 +3,19 @@ import React,{useEffect, useState} from 'react'
 import { getData } from '../api'
 import { Product } from '../constant'
 import ProductItem from '../ProductItem'
+import { useSelector,useDispatch } from 'react-redux'
+import { RepeatClockIcon } from '@chakra-ui/icons'
+
 
 const Ladies = () => {
     const [data,setData]=useState<Product[]>([])
 useEffect(()=>{
 getData("ladies").then(res=>setData(res))
 },[])
+
+
   return (
-    <Grid gridTemplateColumns="repeat(4,1fr)" gap={20} w="90%" m="auto" mt={50}>
+    <Grid templateColumns={{base:"repeat(1,1fr)", md:"repeat(3,1fr)",lg:"repeat(5,1fr)"}} gap={10} w="90%" m="auto" >
     {data && data.map(ele=>(
       <GridItem>
       <ProductItem key={ele.title} {...ele}/>
