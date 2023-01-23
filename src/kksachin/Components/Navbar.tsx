@@ -64,11 +64,12 @@ export const Navbar=()=>{
               
 
 <SimpleGrid columns={[2, null, 6]}  marginLeft="720"spacing='20px'>
- 
+<a href="https://stirring-biscochitos-4276ce.netlify.app/">
 <Box border={"0px solid black"} height='70px'><CiShoppingTag style={{marginTop:"10px",width:"45px",height:"20px"}} color='white'/>
    <p style={{color:"white",marginTop:"0px",fontWeight:"15px",fontSize:"14px"}}>Shopping</p>
   
   </Box>
+  </a>
   <Link to={"/product"} >
   <Box border={"0px solid black"} height='70px'><FaLaptopHouse style={{marginTop:"10px",width:"45px",height:"20px"}} color='white'/>
    <p style={{color:"white",marginTop:"0px",fontWeight:"15px",fontSize:"14px"}}>Products</p>

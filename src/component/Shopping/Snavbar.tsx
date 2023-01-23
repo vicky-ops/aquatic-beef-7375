@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-
+import { Link } from "react-router-dom"
 import { Flex, Image,Input,InputGroup,Text,Button,Box, Show,useMediaQuery
  } from '@chakra-ui/react'
  
@@ -21,7 +21,9 @@ getData("cart").then(res=>setData(res))
   return (
     <Flex justifyContent="space-evenly" h="100px" pos="sticky">
       <Box w="20%"> 
+      <Link to={"/"} >
           <Image   src="https://i.ibb.co/Zc5Y127/logo-bharatmart2.png" alt="logo-bharatmart2" w="150px"  />
+          </Link>
       </Box>
     <Flex mt={25} gap={10} >
      {isLargerThan800 &&
@@ -32,8 +34,9 @@ getData("cart").then(res=>setData(res))
       <Button h="30px"  p={5}backgroundColor="#2a6462" color="white"><FaSearch/> Search</Button>
       </InputGroup>
       </Box>}
-
-    <Box ><Button h="30px" p={5} backgroundColor="#2e3192" color="white">Card:<Text pl={2}>{cardnu}</Text></Button></Box>
+<Link to={"/cart"} >
+    <Box ><Button h="30px" p={5} backgroundColor="#2e3192" color="white">Cart:<Text pl={2}>{cardnu}</Text></Button></Box>
+    </Link>
     </Flex>
  </Flex>
   )
