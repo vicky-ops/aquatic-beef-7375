@@ -44,7 +44,7 @@
 # Snap shots
 <b> Home Page </b>
 
-![booking](https://user-images.githubusercontent.com/104014308/188278962-d6006f9a-c3d7-49f8-b2ec-2c560440f941.JPG)
+![booking]<img src="https://i.ibb.co/gT0KnPf/2023-01-23-5.png" alt="2023-01-23-5" border="0">
 
 
 <b> Hotel Search </b>
