@@ -43,13 +43,13 @@
 
 # Snap shots
 <b> Home Page </b>
+![Home](https://i.ibb.co/gT0KnPf/2023-01-23-5.png)
 
-![booking]<img src="https://i.ibb.co/gT0KnPf/2023-01-23-5.png" alt="2023-01-23-5" border="0">
+
 
 
 <b> Hotel Search </b>
 
-![Hotels](https://user-images.githubusercontent.com/104014308/190851724-35b2a79f-6b4a-4a73-8916-1321e95cfe06.PNG)
 
 
 <b> Flights Page </b>
